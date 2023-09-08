@@ -2,11 +2,7 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
 use std::{fs, vec};
-// Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
-#[tauri::command]
-fn greet(name: &str) -> String {
-    format!("Hello, {}! You've been greeted from Rust!", name)
-}
+
 
 #[tauri::command]
 fn list_folder(fp: &str) -> Vec<String>{
@@ -21,7 +17,7 @@ fn list_folder(fp: &str) -> Vec<String>{
 
 fn main() {
     tauri::Builder::default()
-        .invoke_handler(tauri::generate_handler![greet, list_folder])
+        .invoke_handler(tauri::generate_handler![list_folder])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }
