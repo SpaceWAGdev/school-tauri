@@ -7,3 +7,4 @@ import { invoke } from "@tauri-apps/api/tauri";
 //         document.querySelector("body")!.innerHTML += element += "\n";
 //     });
 // });
+console.log("hello world")
