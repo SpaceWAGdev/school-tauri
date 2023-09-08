@@ -8,3 +8,4 @@ import { invoke } from "@tauri-apps/api/tauri";
 //     });
 // });
 console.log("hello world")
+console.log("test")
